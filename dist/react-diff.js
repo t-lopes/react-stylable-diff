@@ -1,9 +1,8 @@
-'use strict';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import jsdiff from 'diff';
 
-var React = require('react');
-var jsdiff = require('diff');
-
-var fnMap = {
+const fnMap = {
   'chars': jsdiff.diffChars,
   'words': jsdiff.diffWords,
   'sentences': jsdiff.diffSentences,
@@ -21,29 +20,11 @@ var fnMap = {
  *  - removed parts are in <del>
  *  - unchanged parts are in <span>
  */
-module.exports = React.createClass({
-  displayName: 'Diff',
 
-  getDefaultProps: function getDefaultProps() {
-    return {
-      inputA: '',
-      inputB: '',
-      type: 'chars',
-      className: 'Difference'
-    };
-  },
-
-  propTypes: {
-    inputA: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.object]),
-    inputB: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.object]),
-    type: React.PropTypes.oneOf(['chars', 'words', 'sentences', 'json']),
-    className: React.PropTypes.string
-  },
-
-  render: function render() {
-    var diff = fnMap[this.props.type](this.props.inputA, this.props.inputB);
-
-    var result = diff.map(function (part, index) {
+export default class Diff extends Component {
+  render() {
+    const diff = fnMap[this.props.type](this.props.inputA, this.props.inputB);
+    const result = diff.map((part, index) => {
       if (part.added) {
         return React.createElement(
           'ins',
@@ -64,12 +45,18 @@ module.exports = React.createClass({
         part.value
       );
     });
-
     return React.createElement(
       'div',
       { className: this.props.className },
       result
     );
   }
-});
+}
+
+Diff.defaultProps = {
+  inputA: '',
+  inputB: '',
+  type: 'chars',
+  className: 'Difference'
+};
 
