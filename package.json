@@ -24,13 +24,15 @@
     "url": "https://github.com/davidmason/react-stylable-diff/issues"
   },
   "homepage": "https://github.com/davidmason/react-stylable-diff",
-  "peerDependencies": {
-    "react": ">=0.12.0"
-  },
   "dependencies": {
-    "diff": "^1.2.0"
+    "diff": "^1.2.0",
+    "prop-types": "^15.6.0",
+    "react": "^16.0.0"
   },
   "devDependencies": {
-    "babel": "^5.1.10"
-  }
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1"
+  },
+  "false": {}
 }

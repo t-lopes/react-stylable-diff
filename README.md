@@ -15,16 +15,16 @@ npm install react-stylable-diff
 Pass text to compare as `props.inputA` and `props.inputB`:
 
 ```javascript
-var React = require('react');
-var Diff = require('react-stylable-diff');
+import React, {Component} from 'react';
+import Diff from 'react-stylable-diff';
 
-var MyComponent = React.createClass({
-  render: function() {
+class MyComponent extends Component {
+  render() {
     return (
-      <Diff inputA="worst" inputB="blurst"/>
+      <Diff inputA="worst" inputB="blurst" />
     );
   }
-});
+}
 ```
 
 You can also specify different values in `props.type`
@@ -33,18 +33,18 @@ to compare in different ways. Valid values are `'chars'`,
 
 
 ```javascript
-var React = require('react');
-var Diff = require('react-stylable-diff');
+import React, {Component} from 'react';
+import Diff from 'react-stylable-diff';
 
-var MyComponent = React.createClass({
-  render: function() {
+class MyComponent extends Component {
+  render() {
     return (
       <Diff type="words"
         inputA="It was the worst of times"
-        inputB="It was the blurst of times"/>
+        inputB="It was the blurst of times" />
     );
   }
-});
+}
 ```
 
 ### Styling
@@ -80,16 +80,16 @@ Here are some styles that might work:
 ## Example
 
 ```javascript
-var React = require('react');
-var Diff = require('react-stylable-diff');
+import React, {Component} from 'react';
+import Diff from 'react-stylable-diff';
 
-var Component = React.createClass({
-  render: function() {
+class MyComponent extends Component {
+  render() {
     return (
       <Diff inputA="worst" inputB="blurst" type="chars" />
     );
   }
-});
+}
 ```
 
 ## License
