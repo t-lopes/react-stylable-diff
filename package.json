@@ -1,6 +1,6 @@
 {
   "name": "react-stylable-diff",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Output differences between inputs, ready for css styling",
   "main": "dist/react-diff.js",
   "scripts": {
