@@ -1,38 +1,39 @@
 {
   "name": "react-stylable-diff",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Output differences between inputs, ready for css styling",
   "main": "dist/react-diff.js",
   "scripts": {
-    "build": "./node_modules/.bin/babel lib/react-diff.js > dist/react-diff.js"
+    "build": "npx babel lib/react-diff.js --out-file dist/react-diff.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/davidmason/react-stylable-diff.git"
+    "url": "https://github.com/t-lopes/react-stylable-diff.git"
   },
   "keywords": [
     "react",
     "diff",
     "css"
   ],
-  "author": "David Mason <drdmason@gmail.com>",
+  "author": "Tiago Lopes <tiago.lopes@jumia.com>",
   "contributors": [
-    "Cezary Wojtkowski <cezary@gmail.com>"
+    "Cezary Wojtkowski <cezary@gmail.com>",
+    "David Mason <drdmason@gmail.com>"
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/davidmason/react-stylable-diff/issues"
+    "url": "https://github.com/t-lopes/react-stylable-diff/issues"
   },
-  "homepage": "https://github.com/davidmason/react-stylable-diff",
+  "homepage": "https://github.com/t-lopes/react-stylable-diff",
   "dependencies": {
     "diff": "^1.2.0",
     "prop-types": "^15.6.0",
     "react": "^16.0.0"
   },
   "devDependencies": {
-    "babel": "^6.23.0",
     "babel-cli": "^6.26.0",
-    "babel-plugin-transform-react-jsx": "^6.24.1"
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1"
   },
   "false": {}
 }
